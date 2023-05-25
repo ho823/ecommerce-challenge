@@ -1,0 +1,109 @@
+#carousel-mobile {
+  margin-top: 2rem;
+}
+
+#lightbox {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  #carousel-mobile {
+    display: none;
+  }
+  #lightbox {
+    display: flex;
+    flex-direction: column;
+    #mainContent {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0 2rem 0;
+      #mainImg {
+        width: 81%;
+        border-radius: 0.6rem;
+      }
+    }
+    #secondaryContent {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      width: 36rem;
+      .images {
+        width: 15%;
+        margin-right: 1rem;
+        border-radius: 0.75rem;
+      }
+      img:nth-child(6), .active-img:nth-child(6) {
+        margin-right: 0;
+      }
+      .active-img {
+        width: 15%;
+        margin-right: 1rem;
+        outline: solid #ed6c02 2px;
+        border-radius: 0.75rem;
+      }
+    }
+  }
+  #gallery-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+     #close-btn {
+      position: absolute;
+      top: 6rem;
+      left: 43rem;
+      #close-icon  {
+        font-size: 4rem;
+        color: #fffcec;
+      }
+     }
+
+    #main-img-gallery {
+      width: 65%;
+      position: relative;
+      margin-bottom: 3rem;
+
+      img {
+        width: 100%;
+      }
+    }
+    #secondary-img-gallery {
+      display: flex;
+      align-items: center;
+      width: 75%;
+      justify-content: space-between;
+    }
+    #container-btn {
+      position: absolute;
+      top: 31rem;
+      button:nth-child(1) {
+        margin-right: 30rem;
+      }
+      .btn-gallery {
+        font-size: 3rem;
+        border-radius: 2rem;
+        height: 4rem;
+        width: 4rem;
+        border: none;
+        background-color: #fffcec;
+      }
+    }
+  
+    .thumbnail  {
+      width: 84px;
+      border-radius: 0.6rem;
+    }
+  }
+}
+
+@media screen and  (min-width: 1024px) {
+  #lightbox {
+    #secondaryContent {
+      .images, .active-img {
+        width: 13%;
+        margin-right: 0.8rem;
+      }
+    }
+  }
+}
